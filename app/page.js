@@ -4,20 +4,16 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="" id="main">
-     
+
 
 
       <section className="hero background-video">
         {/* <video src="https://www.bavaria-group.ru/files/modules/1_1688043892.mp4" autoPlay loop muted></video> */}
-        <video
-					autoPlay
-					playsInline
-					muted
-					// loop
-				>
-					<source src='https://www.bavaria-group.ru/files/modules/1_1688043892.mp4' type='video/mp4' />
-				</video>
-      <div className="overlay"></div>
+        <video autoPlay loop muted playsInline controlsList="nofullscreen">
+          <source src='https://www.bavaria-group.ru/files/modules/1_1688043892.mp4' type='video/mp4' />
+        </video>
+
+        <div className="overlay"></div>
         <div className="hero-content text-center">
           <div className="sd:max-w-lg xz:w-full sd:pt-0 xz:pt-20">
             <h1 className="sd:text-6xl xz:text-4xl font-bold text-white">
