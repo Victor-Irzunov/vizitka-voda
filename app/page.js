@@ -13,7 +13,7 @@ export default function Home() {
 					autoPlay
 					playsInline
 					muted
-					loop
+					// loop
 				>
 					<source src='https://www.bavaria-group.ru/files/modules/1_1688043892.mp4' type='video/mp4' />
 				</video>
