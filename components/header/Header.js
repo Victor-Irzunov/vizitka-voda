@@ -79,7 +79,7 @@ const Header = () => {
 								</li>
 								<li>
 									<LinkScroll
-										to="main"
+										to="catalog"
 										smooth={true}
 										offset={-100}
 										duration={800}
@@ -88,12 +88,12 @@ const Header = () => {
 										href='#/'
 										onClick={toggleMenu}
 									>
-										Прайс
+										Каталог
 									</LinkScroll>
 								</li>
 								<li>
 									<LinkScroll
-										to="main"
+										to="contacts"
 										smooth={true}
 										offset={-100}
 										duration={800}
