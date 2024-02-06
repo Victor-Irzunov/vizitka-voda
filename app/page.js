@@ -1,4 +1,7 @@
+import AboutWater from "@/components/about-water/AboutWater";
 import About from "@/components/about/About";
+import Price from "@/components/price/Price";
+import Video from "@/components/video/Video";
 import Image from "next/image";
 
 export default function Home() {
@@ -39,6 +42,10 @@ export default function Home() {
       <div className='mx-auto'>
         <Image src='/fon/fon.webp' alt='Питьевая вода Тбау' width={1920} height={763} />
       </div>
+
+      <Video />
+      <AboutWater />
+      <Price />
     </main>
   );
 }
