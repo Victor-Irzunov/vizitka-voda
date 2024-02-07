@@ -1,15 +1,25 @@
+"use client"
+
 import AboutWater from "@/components/about-water/AboutWater";
 import About from "@/components/about/About";
+import Modal from "@/components/modal/Modal";
 import Price from "@/components/price/Price";
 import Video from "@/components/video/Video";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const handleOrderClick = (product) => {
+    setSelectedProduct(product);
+    document.getElementById("my_modal_3").showModal();
+  };
+  const closeModal = () => {
+    document.getElementById("my_modal_3").close();
+  };
   return (
     <main className="" id="main">
-
-
-
       <section className="hero background-video">
         {/* <video src="https://www.bavaria-group.ru/files/modules/1_1688043892.mp4" autoPlay loop muted></video> */}
         <video autoPlay loop muted playsInline controlsList="nofullscreen">
@@ -30,7 +40,10 @@ export default function Home() {
               Предлагаем выгодные условия для оптовых покупателей и гарантируем высокое качество нашей продукции. Наши  напитки отличаются неповторимым вкусом и безупречным качеством. Мы гордимся тем, что являемся эксклюзивным импортером этого превосходного бренда, предоставляя вам уникальную возможность наслаждаться изысканными и натуральными напитками.
             </p>
 
-            <button className="btn btn-primary uppercase mt-3">
+            <button
+              className="btn btn-primary uppercase mt-3"
+              onClick={() => handleOrderClick('Получить консультацию')}
+            >
               Получить консультацию
             </button>
           </div>
@@ -45,7 +58,15 @@ export default function Home() {
 
       <Video />
       <AboutWater />
-      <Price />
+      <Price handleOrderClick={handleOrderClick} />
+
+
+      <Modal
+        selectedProduct={selectedProduct}
+        closeModal={closeModal}
+        isFormSubmitted={isFormSubmitted}
+        setIsFormSubmitted={setIsFormSubmitted}
+      />
     </main>
   );
 }

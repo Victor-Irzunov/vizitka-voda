@@ -1,6 +1,6 @@
 import { priceData } from "@/constans/dataPrice";
 
-const Price = () => {
+const Price = ({ handleOrderClick }) => {
 	return (
 		<section className='py-20' id="catalog">
 			<div className='container mx-auto'>
@@ -68,7 +68,10 @@ const Price = () => {
 														{elem.price.toFixed(2)} BYN
 													</p>
 													<div className='card-actions justify-end'>
-														<button className='btn btn-primary'>
+														<button
+															className='btn btn-primary'
+															onClick={() => handleOrderClick(`Купить ${elem.name}`)}
+														>
 															Купить
 														</button>
 													</div>
