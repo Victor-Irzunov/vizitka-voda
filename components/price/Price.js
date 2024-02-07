@@ -1,6 +1,18 @@
-import { priceData } from "@/constans/dataPrice";
+import React, { useState } from 'react';
+import { priceData } from '@/constans/dataPrice'
+import Image from "next/image";
 
 const Price = ({ handleOrderClick }) => {
+	const [filter, setFilter] = useState('all'); // Initialize filter state
+
+	// Function to handle filter change
+	const handleFilterChange = (filterValue) => {
+		setFilter(filterValue);
+	};
+
+	// Filtered product data based on the selected filter
+	const filteredProducts = filter === 'all' ? priceData : priceData.filter(category => category.title === filter);
+
 	return (
 		<section className='py-20' id="catalog">
 			<div className='container mx-auto'>
@@ -10,8 +22,25 @@ const Price = ({ handleOrderClick }) => {
 					</h6>
 				</div>
 
+				<div className='mt-9'>
+					<p className='text-center uppercase text-xs'>
+						Фильтр
+					</p>
+
+					<div className='flex justify-center mt-2 text-center'>
+						<div onClick={() => handleFilterChange('all')} className={filter === 'all' ? 'font-bold mx-2 cursor-pointer sd:text-sm xz:text-[8px] underline' : 'mx-2 cursor-pointer sd:text-sm xz:text-[8px]'}>
+							Все
+						</div>
+						{priceData.map(category => (
+							<div key={category.id} onClick={() => handleFilterChange(category.title)} className={filter === category.title ? 'font-bold mx-2 cursor-pointer sd:text-sm xz:text-[8px] underline' : 'mx-2 cursor-pointer sd:text-sm xz:text-[8px]'}>
+								{category.title}
+							</div>
+						))}
+					</div>
+				</div>
+
 				<div className='mt-8'>
-					{priceData.map(el => {
+					{filteredProducts.map(el => {
 						return (
 							<div
 								className='bg-slate-200 mb-20 py-10 sd:px-5 xz:px-1 rounded-md'

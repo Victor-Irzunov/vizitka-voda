@@ -23,9 +23,10 @@ const AboutWater = () => {
 							</li>
 						</ul>
 						<hr />
-						<h4 className='mt-8 text-2xl'>
+						<h4 className='mt-8 text-2xl font-semibold mb-2'>
 							Состав
 						</h4>
+						<Image src='/svg/structure.svg' alt='Особенность воды' width={55} height={55} />
 						<p className="mt-3">КАТИОНЫ: <strong>Натрий</strong> Na++ <strong>Калий</strong> K+ &lt;10,
 							<strong>Магний</strong> Mg2+ &lt;15, <strong>Кальций</strong> Ca2+ 20-80
 							АНИОНЫ:
@@ -33,13 +34,37 @@ const AboutWater = () => {
 							<strong>Хлориды</strong> CL- &lt;25
 						</p>
 
-						<h5 className='text-2xl mt-5'>
+						<h5 className='text-2xl mt-8 font-semibold mb-2'>
 							Место добычи
 						</h5>
-
+						<Image src='/svg/mountains.svg' alt='Особенность воды' width={55} height={55} />
 						<p className='mt-3'>
 							РФ, РСО-Алания, Пригородный р-он, с. Гусара, источник “Гусыра”.
 						</p>
+
+						<h6 className='text-2xl mt-8 font-semibold'>
+							Особенность
+						</h6>
+						<div className='flex flex-col mt-5'>
+
+							<div className=''>
+								<Image src='/svg/benefits.svg' alt='Особенность воды' width={50} height={50} />
+								<div className='mt-2'>
+									<p className=''>
+										Употребление малонатриевой воды снижает риск сердечно-сосудистых заболеваний, инфарктов и инсультов. Центр водоресурсов анализировал эту воду в течение трех лет и представил итоговое заключение о том, что она является стабильной, то есть состав продукта остается неизменным независимо от внешних обстоятельств.
+									</p>
+								</div>
+							</div>
+							<div className='mt-6'>
+								<Image src='/svg/cup.svg' alt='Особенность воды' width={60} height={60} />
+								<div className='mt-2'>
+									<p className=''>
+									В 2016 году вода «Тбау» стала бронзовым призером международного фестиваля в Чехии (Zlatá pivnÍ pečet). В 2017 году «Тбау» также получила статус «Эко-продукта» с правом нанесения соответствующего знака на этикетку.
+									</p>
+								</div>
+							</div>
+						</div>
+
 					</div>
 
 					<div className='mx-auto sd:mt-0 xz:mt-10 relative'>
