@@ -14,7 +14,7 @@ const Price = ({ handleOrderClick }) => {
 	const filteredProducts = filter === 'all' ? priceData : priceData.filter(category => category.title === filter);
 
 	return (
-		<section className='py-20' id="catalog">
+		<section className='pt-20 pb-2' id="catalog">
 			<div className='container mx-auto'>
 				<div>
 					<h6 className='sd:text-5xl xz:text-4xl text-center'>
@@ -65,31 +65,35 @@ const Price = ({ handleOrderClick }) => {
 													/>
 												</figure>
 												<div className='card-body'>
-													<h3 className='card-title sd:text-3xl xz:text-xl'>
+													<h3 className='card-title sd:text-2xl xz:text-xl'>
 														{elem.name}
-
 													</h3>
 													<div className='badge badge-accent'>
 														{elem.badge}
 													</div>
-													<p className='mt-5'>
+													<p className='mt-2 sd:text-base xz:text-sm'>
 														<span className='font-semibold'>
 															Объём:
 														</span>{' '}
 														{elem.volume} л.
 													</p>
-													<p className=''>
+													<p className='sd:text-base xz:text-sm'>
 														<span className='font-semibold'>
 															Тара:
 														</span>{' '}
 														{elem.type}
 													</p>
-													<p className='mb-5'>
+													<p className='sd:text-base xz:text-sm'>
 														<span className='font-semibold'>
 															В упак. штук:
 														</span>{' '}
 														{elem.packaging}
 													</p>
+
+													<p className='mb-2 sd:text-xs xz:text-[9px] text-gray-600'>
+														{elem.info}
+													</p>
+
 													<p className=''>
 														Цена товара (без НДС)
 													</p>

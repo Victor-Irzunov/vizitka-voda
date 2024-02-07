@@ -60,6 +60,10 @@ export default function Home() {
       <AboutWater />
       <Price handleOrderClick={handleOrderClick} />
 
+      <div className='mb-10'>
+        <Image src='/gagarina.webp' alt='Полина Гагарина Амбассадор воды “ТБАУ”' width={1680} height={943} />
+      </div>
+
 
       <Modal
         selectedProduct={selectedProduct}
