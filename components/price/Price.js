@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { priceData } from '@/constans/dataPrice'
-import Image from "next/image";
+import { priceData } from '@/constans/dataPrice';
 
 const Price = ({ handleOrderClick }) => {
-	const [filter, setFilter] = useState('all'); // Initialize filter state
+	const [filter, setFilter] = useState('all');
 
-	// Function to handle filter change
 	const handleFilterChange = (filterValue) => {
 		setFilter(filterValue);
 	};
 
-	// Filtered product data based on the selected filter
+	const add20PercentToPrice = (price) => price * 1.2;
+
 	const filteredProducts = filter === 'all' ? priceData : priceData.filter(category => category.title === filter);
 
 	return (
@@ -21,12 +20,10 @@ const Price = ({ handleOrderClick }) => {
 						Каталог
 					</h6>
 				</div>
-
 				<div className='mt-9'>
 					<p className='text-center uppercase text-xs'>
 						Фильтр
 					</p>
-
 					<div className='flex justify-center mt-2 text-center'>
 						<div onClick={() => handleFilterChange('all')} className={filter === 'all' ? 'font-bold mx-2 cursor-pointer sd:text-sm xz:text-[8px] underline' : 'mx-2 cursor-pointer sd:text-sm xz:text-[8px]'}>
 							Все
@@ -38,12 +35,11 @@ const Price = ({ handleOrderClick }) => {
 						))}
 					</div>
 				</div>
-
 				<div className='mt-8'>
 					{filteredProducts.map(el => {
 						return (
 							<div
-								className='bg-slate-200 mb-20 py-10 sd:px-5 xz:px-1 rounded-md'
+								className='bg-slate-200 mb-20 py-5 sd:px-5 xz:px-1 rounded-md'
 								key={el.id}
 							>
 								<h2 className='sd:text-5xl xz:text-3xl text-center'>
@@ -51,6 +47,7 @@ const Price = ({ handleOrderClick }) => {
 								</h2>
 								<div className='grid grid-cols-1 md:grid-cols-3  mt-10'>
 									{el.children.map(elem => {
+										const updatedPrice = add20PercentToPrice(elem.price);
 										return (
 											<div
 												key={elem.id}
@@ -89,16 +86,14 @@ const Price = ({ handleOrderClick }) => {
 														</span>{' '}
 														{elem.packaging}
 													</p>
-
 													<p className='mb-2 sd:text-xs xz:text-[9px] text-gray-600'>
 														{elem.info}
 													</p>
-
 													<p className=''>
 														Цена товара (без НДС)
 													</p>
 													<p className='font-bold text-3xl'>
-														{elem.price.toFixed(2)} BYN
+														{updatedPrice.toFixed(2)} BYN
 													</p>
 													<div className='card-actions justify-end'>
 														<button
@@ -117,6 +112,11 @@ const Price = ({ handleOrderClick }) => {
 						);
 					})}
 				</div>
+				{/* <div className='mb-10'>
+                    <a href='/price.pdf' download className='underline font-semibold'>
+                        Скачать прайс (pdf)
+                    </a>
+                </div> */}
 			</div>
 		</section>
 	);
