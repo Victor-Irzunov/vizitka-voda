@@ -8,7 +8,7 @@ const Price = ({ handleOrderClick }) => {
 		setFilter(filterValue);
 	};
 
-	const add20PercentToPrice = (price) => price * 1.2;
+	const add20PercentToPrice = (price) => price * 1.1;
 
 	const filteredProducts = filter === 'all' ? priceData : priceData.filter(category => category.title === filter);
 
