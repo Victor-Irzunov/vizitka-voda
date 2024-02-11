@@ -8,7 +8,7 @@ const Price = ({ handleOrderClick }) => {
 		setFilter(filterValue);
 	};
 
-	const add20PercentToPrice = (price) => price * 1.1;
+	const add20PercentToPrice = (price) => price * 1;
 
 	const filteredProducts = filter === 'all' ? priceData : priceData.filter(category => category.title === filter);
 
@@ -112,11 +112,11 @@ const Price = ({ handleOrderClick }) => {
 						);
 					})}
 				</div>
-				{/* <div className='mb-10'>
+				<div className='mb-10'>
                     <a href='/price.pdf' download className='underline font-semibold'>
                         Скачать прайс (pdf)
                     </a>
-                </div> */}
+                </div>
 			</div>
 		</section>
 	);
