@@ -17,8 +17,8 @@ const Footer = () => {
 					<span className="mx-3 font-semibold">
 						Георгий
 					</span>
-				</div>
-				<div className='mb-3 text-2xl'>
+				</div> */}
+				{/* <div className='mb-3 text-2xl'>
 					<a href="tel:80298576666" className="font-semibold xz:block sd:inline-block">
 						+375 29 857-66-66
 					</a>
@@ -27,11 +27,11 @@ const Footer = () => {
 					</span>
 				</div> */}
 				<div className='mb-3 text-2xl'>
-					<a href="tel:80298576666" className="font-semibold xz:block sd:inline-block">
+					<a href="tel:80333511597" className="font-semibold xz:block sd:inline-block">
 						+375 33 351-15-97
 					</a>
 					<span className="mx-3 font-semibold">
-						Виктор
+						Cослан
 					</span>
 				</div>
 
