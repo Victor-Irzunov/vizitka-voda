@@ -23,7 +23,7 @@ export default function Home() {
       <section className="hero background-video">
         {/* <video src="https://www.bavaria-group.ru/files/modules/1_1688043892.mp4" autoPlay loop muted></video> */}
         <video autoPlay loop muted playsInline controlsList="nofullscreen">
-          <source src='/video/Video.mp4' type='video/mp4' />
+          <source src='/video/video.mp4' type='video/mp4' />
         </video>
 
         <div className="overlay"></div>
