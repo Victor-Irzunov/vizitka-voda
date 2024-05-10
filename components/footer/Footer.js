@@ -10,25 +10,17 @@ const Footer = () => {
 				<h6 className='uppercase mb-3 mt-8 text-xl'>
 					Контакты
 				</h6>
-				{/* <div className='mb-3 text-2xl'>
+				<div className='mb-3 text-2xl'>
 					<a href="tel:80333969007" className="font-semibold xz:block sd:inline-block">
 						+375 33 396-90-07
 					</a>
 					<span className="mx-3 font-semibold">
 						Георгий
 					</span>
-				</div> */}
-				{/* <div className='mb-3 text-2xl'>
+				</div>
+				<div className='mb-3 text-2xl'>
 					<a href="tel:80298576666" className="font-semibold xz:block sd:inline-block">
 						+375 29 857-66-66
-					</a>
-					<span className="mx-3 font-semibold">
-						Cослан
-					</span>
-				</div> */}
-				<div className='mb-3 text-2xl'>
-					<a href="tel:80333511597" className="font-semibold xz:block sd:inline-block">
-						+375 33 351-15-97
 					</a>
 					<span className="mx-3 font-semibold">
 						Cослан
@@ -45,17 +37,17 @@ const Footer = () => {
 				</div>
 
 				<p className="font-bold mt-4 text-2xl">
-				info.contact.vitech@gmail.com
+					bavariagrodno@mail.ru
 				</p>
 
-				{/* <div className='mt-4'>
+				<div className='mt-4'>
 					<h6 className=''>
 						УНП
 					</h6>
 					<p className=''>
 						591964825
 					</p>
-				</div> */}
+				</div>
 
 				<nav className="mt-4">
 					<div className="flex justify-center items-center">

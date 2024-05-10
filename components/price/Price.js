@@ -24,12 +24,12 @@ const Price = ({ handleOrderClick }) => {
 					<p className='text-center uppercase text-xs'>
 						Фильтр
 					</p>
-					<div className='flex justify-center mt-2 text-center'>
-						<div onClick={() => handleFilterChange('all')} className={filter === 'all' ? 'font-bold mx-2 cursor-pointer sd:text-sm xz:text-[8px] underline' : 'mx-2 cursor-pointer sd:text-sm xz:text-[8px]'}>
+					<div className='flex justify-center flex-wrap mt-2 text-center'>
+						<div onClick={() => handleFilterChange('all')} className={filter === 'all' ? 'font-bold mx-2 cursor-pointer sd:text-sm xz:text-[8px] underline mt-2' : 'mx-2 cursor-pointer sd:text-sm xz:text-[8px] mt-2'}>
 							Все
 						</div>
 						{priceData.map(category => (
-							<div key={category.id} onClick={() => handleFilterChange(category.title)} className={filter === category.title ? 'font-bold mx-2 cursor-pointer sd:text-sm xz:text-[8px] underline' : 'mx-2 cursor-pointer sd:text-sm xz:text-[8px]'}>
+							<div key={category.id} onClick={() => handleFilterChange(category.title)} className={filter === category.title ? 'font-bold mx-2 cursor-pointer sd:text-sm xz:text-[8px] underline mt-2' : 'mx-2 cursor-pointer sd:text-sm xz:text-[8px] mt-2'}>
 								{category.title}
 							</div>
 						))}
@@ -45,7 +45,10 @@ const Price = ({ handleOrderClick }) => {
 								<h2 className='sd:text-5xl xz:text-3xl text-center'>
 									{el.title}
 								</h2>
-								<div className='grid grid-cols-1 md:grid-cols-3  mt-10'>
+								<p className='mt-5 text-center sd:text-base xz:text-sm'>
+									{el.description}
+								</p>
+								<div className='grid grid-cols-1 md:grid-cols-3 mt-10'>
 									{el.children.map(elem => {
 										const updatedPrice = add20PercentToPrice(elem.price);
 										return (
@@ -86,10 +89,10 @@ const Price = ({ handleOrderClick }) => {
 														</span>{' '}
 														{elem.packaging}
 													</p>
-													<p className='mb-2 sd:text-xs xz:text-[9px] text-gray-600'>
+													{/* <p className='mb-2 sd:text-xs xz:text-[9px] text-gray-600'>
 														{elem.info}
-													</p>
-													<p className=''>
+													</p> */}
+													<p className='mt-3'>
 														Цена товара (без НДС)
 													</p>
 													<p className='font-bold text-3xl'>
@@ -113,10 +116,10 @@ const Price = ({ handleOrderClick }) => {
 					})}
 				</div>
 				<div className='mb-10'>
-                    <a href='/price.pdf' download className='underline font-semibold'>
-                        Скачать прайс (pdf)
-                    </a>
-                </div>
+					<a href='/price.pdf' download className='underline font-semibold'>
+						Скачать прайс (pdf)
+					</a>
+				</div>
 			</div>
 		</section>
 	);
