@@ -1,6 +1,7 @@
-import  Header  from "@/components/header/Header";
+import Header from "@/components/header/Header";
 import "./globals.css";
 import Footer from '@/components/footer/Footer'
+import RunningText from "@/components/RunningText/RunningText";
 
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <body>
+        <RunningText />
         <Header />
         {children}
         <Footer />

@@ -18,7 +18,7 @@ const Header = () => {
 
 
 	return (
-		<header className="fixed top-2 z-50 left-0 right-0">
+		<header className="fixed sd:top-7 xz:top-6 z-50 left-0 right-0">
 			<div className="container mx-auto">
 				<div className="">
 					<div className="flex justify-between items-center w-full">

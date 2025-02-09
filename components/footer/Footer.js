@@ -1,3 +1,4 @@
+import phoneNumbers from "@/config/config"
 import Image from "next/image"
 
 
@@ -11,16 +12,16 @@ const Footer = () => {
 					Контакты
 				</h6>
 				<div className='mb-3 text-2xl'>
-					<a href="tel:80333969007" className="font-semibold xz:block sd:inline-block">
-						+375 33 396-90-07
+					<a href={`tel:${phoneNumbers.mainPhoneLink}`} className="font-semibold xz:block sd:inline-block">
+						{phoneNumbers.mainPhone}
 					</a>
 					<span className="mx-3 font-semibold">
 						Георгий
 					</span>
 				</div>
 				<div className='mb-3 text-2xl'>
-					<a href="tel:80298576666" className="font-semibold xz:block sd:inline-block">
-						+375 29 857-66-66
+					<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className="font-semibold xz:block sd:inline-block">
+						{phoneNumbers.secondaryPhone}
 					</a>
 					<span className="mx-3 font-semibold">
 						Cослан

@@ -5,6 +5,7 @@ import About from "@/components/about/About";
 import Modal from "@/components/modal/Modal";
 import Price from "@/components/price/Price";
 import Video from "@/components/video/Video";
+import phoneNumbers from "@/config/config";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -40,12 +41,14 @@ export default function Home() {
               Предлагаем выгодные условия для оптовых покупателей и гарантируем высокое качество нашей продукции. Наши  напитки отличаются неповторимым вкусом и безупречным качеством. Мы гордимся тем, что являемся эксклюзивным импортером этого превосходного бренда, предоставляя вам уникальную возможность наслаждаться изысканными и натуральными напитками.
             </p>
 
-            <button
-              className="btn btn-primary uppercase mt-3"
-              onClick={() => handleOrderClick('Получить консультацию')}
-            >
-              Получить консультацию
-            </button>
+          
+            <div className='mb-3 text-2xl'>
+              <a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className="font-semibold text-white xz:text-2xl sd:text-4xl">
+                {phoneNumbers.secondaryPhone}
+              </a>
+
+            </div>
+
           </div>
         </div>
       </section>
