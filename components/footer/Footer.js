@@ -43,10 +43,10 @@ const Footer = () => {
 
 				<div className='mt-4'>
 					<h6 className=''>
-						УНП
+						ООО "Ледники Кавказа"
 					</h6>
 					<p className=''>
-						591964825
+						591050354
 					</p>
 				</div>
 
