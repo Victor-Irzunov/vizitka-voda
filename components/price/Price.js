@@ -100,14 +100,14 @@ const Price = ({ handleOrderClick }) => {
 														{/* {updatedPrice.toFixed(2)} BYN */}
 														уточняйте
 													</p>
-													<div className='card-actions justify-between mt-5'>
-														<div className=''>
+													<div className='flex sd:flex-row xz:flex-col justify-between mt-5'>
+														<div className='sd:mb-0 xz:mb-3'>
 															<a href={`tel:${phoneNumbers.secondaryPhoneLink}`} className={``}>
-																<button className="relative overflow-hidden bg-yellow-400 text-black font-bold py-3 sd:px-12 xz:px-16 rounded-lg shadow-lg flex items-center gap-2">
+																<button className="w-full relative overflow-hidden bg-yellow-400 text-black font-bold py-3 sd:px-6 xz:px-16 rounded-lg shadow-lg flex items-center gap-2">
 																	<svg className="w-6 h-6 animate-ringing" fill="currentColor" viewBox="0 0 24 24">
 																		<path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.1-.23 11.36 11.36 0 003.55.57 1 1 0 011 1v3.55a1 1 0 01-1 1A19.94 19.94 0 012 4a1 1 0 011-1h3.55a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.23 1.1z"></path>
 																	</svg>
-																	Позвонить
+																	{phoneNumbers.secondaryPhoneLink}
 																	<span className="absolute inset-0 bg-white opacity-40 transform translate-x-full animate-slide"></span>
 																</button>
 															</a>
@@ -128,11 +128,11 @@ const Price = ({ handleOrderClick }) => {
 						);
 					})}
 				</div>
-				<div className='mb-10'>
+				{/* <div className='mb-10'>
 					<a href='/price.pdf' download className='underline font-semibold'>
 						Скачать прайс (pdf)
 					</a>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

@@ -15,8 +15,6 @@ const Header = () => {
 		setMenuOpen(false);
 	};
 
-
-
 	return (
 		<header className="fixed sd:top-7 xz:top-6 z-50 left-0 right-0">
 			<div className="container mx-auto">
